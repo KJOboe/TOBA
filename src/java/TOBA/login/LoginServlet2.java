@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -59,13 +60,14 @@ public class LoginServlet2 extends HttpServlet {
         } else {
             message = "";
               
-            User user = new User(fname, lname, email, phone, address, city, state, zip, username, password);
+            User user2 = new User(fname, lname, email, phone, address, city, state, zip, username, password);
             
-             
+              HttpSession session = request.getSession();
+            session.setAttribute("user2", user2);
             //HttpSession session = request.getSession();
             //request.setAttribute("user", user);
             
-            request.getSession().setAttribute("user", user);
+            //request.getSession().setAttribute("user", user);
             
                url = "/Account_activity.jsp";
 

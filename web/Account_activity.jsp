@@ -4,7 +4,7 @@
     Author     : Kate
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,6 +21,19 @@
         <h1>ACCOUNT ACTIVITY</h1>
         
  
- <c:if test="${user.firstName} ${user.lastName}"><p> HELLO ${user.firstName}${user.lastName}</p></c:if>
-    <c:otherwise><P> Not in session</p></c:otherwise>
+ <c:choose>
+
+<c:when test="${sessionScope.user2 != null}">
+
+Welcome ${user2.firstName} ${user2.lastName}.
+
+</c:when>
+
+<c:otherwise>
+
+You are not logged in.
+
+</c:otherwise>
+
+</c:choose>
     

@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import TOBA.business.User;
+import javax.servlet.http.HttpSession;
 
 
 
@@ -55,11 +56,12 @@ public class NewCustomerServlet extends HttpServlet {
             
             User user = new User(fname, lname, email, phone, address, city, state, zip, username, password);
                 
-            //HttpSession session = request.getSession();
-            //request.setAttribute("user", user);
+            HttpSession session = request.getSession();
+            session.setAttribute("user", user);
             
             //request.getSession().setAttribute("user", user);
-            request.getSession().setAttribute("user", user);
+            //request.getSession().setAttribute("user", user);
+            
                url = "/Success.jsp";
 
         }
