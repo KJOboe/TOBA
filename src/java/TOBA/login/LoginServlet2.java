@@ -1,21 +1,30 @@
-package TOBA.newcustomer;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package TOBA.login;
 
+import TOBA.business.User;
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import TOBA.business.User;
 
+/**
+ *
+ * @author Kate
+ */
+public class LoginServlet2 extends HttpServlet {
 
-
-public class NewCustomerServlet extends HttpServlet {
-
+    
     @Override
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {       
-        String fname = request.getParameter("firstName");
+       String fname = request.getParameter("firstName");
 
         String lname = request.getParameter("lastName");
 
@@ -36,31 +45,29 @@ public class NewCustomerServlet extends HttpServlet {
         //String password=request.getParameter("password");
         
        String username=lname+zip;
-        String password="welcome1";
+        String password=request.getParameter("password");
        
 
         String message;
-        String url;
+        String url = null;
        
-         
-        if (fname == null || lname == null || email == null || address == null
-                || city == null || state == null || zip == null || phone == null
-                || fname.isEmpty() || lname.isEmpty() || email.isEmpty() || address.isEmpty()
-                || city.isEmpty() || state.isEmpty() || zip.isEmpty() || phone.isEmpty()) {
+        
+        if (password == null || password.isEmpty()) {
             
             message = "Please fill out all the form fields.";
-            url = "/New_customer.jsp";
+            
         } else {
             message = "";
-            
+              
             User user = new User(fname, lname, email, phone, address, city, state, zip, username, password);
-                
+            
+             
             //HttpSession session = request.getSession();
             //request.setAttribute("user", user);
             
-            //request.getSession().setAttribute("user", user);
             request.getSession().setAttribute("user", user);
-               url = "/Success.jsp";
+            
+               url = "/Account_activity.jsp";
 
         }
         

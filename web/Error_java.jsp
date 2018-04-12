@@ -12,6 +12,8 @@
         <title>JSP error Page</title>
     </head>
     <body>
+        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:import url="/includes/header.html"/>
         <h1>Java Error</h1>
         <p>Sorry, Java has thrown an exception.</p>
         <p>To continue, click the Back button.</p>
@@ -20,4 +22,5 @@
         <p>Type:  ${pageContext.exception["class"]}</p>
         <p>Message: ${pageContext.exception.message}</p>
     </body>
+    <c:import url="/includes/footer.jsp"/>
 </html>
