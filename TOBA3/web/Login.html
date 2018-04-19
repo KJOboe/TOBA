@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+   <link rel="stylesheet" href="TOBA_stylesheet.css" />
+    
+</head>
+<body>
+    <!-- Script 2.2 - login.html -->
+	
+	<h1>Titan Banking Login</h1>
+        
+        <p><a href="New_customer.jsp">New Customer Sign Up Page</a></p>
+    <form action="LoginServlet.java" method="post" id="loginForm">
+				
+				<div><label for="userName">User Name:</label><br />
+				<input type="text" name="userName" autofocus id="userName" required></div><br />
+				
+				<div><label for="password">Password:</label><br />
+				<input type="password" name="password" id="password" required></div><br />
+				
+				<div><input type="submit" value="Login" id="submit"></div>
+			
+			</form>
+  
+    <script src="js/app.js"></script><!--external JavaScript file-->
+</body>
+</html>

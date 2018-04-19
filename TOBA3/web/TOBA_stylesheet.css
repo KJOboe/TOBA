@@ -1,0 +1,160 @@
+body {
+       
+       font-family: Arial, sans-serif;
+	   margin: 0;
+	   padding: 0;
+	   background-color: #F8FC81;   
+	   height: 100%;
+}
+
+header {
+       color: black;
+	   font-family: Georgia, sans-serif; 
+	   font-size: 27px;	 
+	  
+ 
+}
+main   {
+	   font-family: Arial,san-serif;
+	   font-size: 14px;
+	   line-height: 35px;
+	   text-align:left;
+	   text-indent:5em;
+	   background-color: #F8FC81;
+	   padding-left: 1em;
+	   padding-right: .2em;
+	   padding-bottom: 1em;
+	   margin-top: 3em;
+	   color: black;
+	  	   	  
+}
+main img {float: left;
+padding-top: 1em;
+margin: 0px 20px;	
+border:2px;	
+padding-bottom: 2em;			
+}
+
+h1       {
+		
+		padding: .5em;	
+		text-align: center;
+		background-repeat: repeat;
+		height: 200px;
+		background-position: center;
+		text-shadow: 3px 3px #FFFFFF;
+		margin: 0px 0px;
+}
+h2{font-size: 112%;
+line-height: 75%;
+}
+h1 img{margin-left: .5em;
+
+}
+nav    {font-weight: bold;
+     background-color:#2F8429; 
+	  text-align: center;
+	font-size: 14px;
+	width: auto;
+	padding: 0.5em;	
+}
+.clear{clear: both;}
+.nav-list-item a {
+			text-decoration: none;
+			color: #FFFFFF;	
+			text-shadow: 1px 1px #132912;
+}
+nav a:link{ color: #FFFFFF;
+}
+
+nav a:hover{ color: red;
+}
+nav a { padding: 1em;
+
+}
+
+a:hover{color: red;
+text-decoration: none;
+font-size: 90%;}
+
+
+
+footer   {font-size: .75em;
+       font-style: italic; 
+       text-align: center; 
+	   padding-top: 2em; 		
+	   font-family: Arial, san-serif;
+	   background-color: #F8FC81;
+	   color: #050505; 
+	  
+}
+form {
+	background-color: #ffffff;
+
+	margin: 0 auto;
+	padding: 0px;
+	border: solid 2px #88A61B;
+
+}
+
+div {
+	clear: both;
+	padding-top: 10px;
+}
+
+div.two label {
+	
+	float: left;
+	width: 100px;
+	text-align: right;
+	padding-right: 10px;
+	position: relative;
+}
+
+div.two input, div.two select{
+	float: left;
+	width: 150px;
+	text-align: left;
+}
+
+div.two select {
+	width: 157px;
+	
+}
+
+div.one {
+	text-align: center;
+}
+
+#submit{
+	clear: both;
+	width: 125px;
+	height: 30px;
+	background:#F8FC81;
+	text-align:center;
+	line-height:20px;
+	font-size:12px;
+	font-weight:bold;
+}
+
+.tooltip {
+	display: block; 
+	position: absolute; 
+	visibility: hidden;
+	left: 25em;
+	top: 0; 
+	width: 10em;
+	padding: 0.5em;
+	font-weight: normal;
+	color: #FFF;
+	background-color: #88A61B;
+	border:solid 2px #0E3D59;
+}
+
+.error {
+	color: #D92525;
+}
+span.error{
+	padding-left: 10px;
+}
+
