@@ -7,11 +7,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="styles/TOBA_stylesheet.css" />
-        <title>New Customer</title>
-    </head>
+   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:import url="/includes/header.html"/>
     <body>
         <p><i>${message}</i></p>
         <form action="newcustomer" method="post">
@@ -33,4 +30,5 @@
             </fieldset>
         </form>
     </body>
+     <c:import url="/includes/footer.jsp"/>
 </html>

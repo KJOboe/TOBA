@@ -30,9 +30,9 @@ public class LoginServlet extends HttpServlet {
         String pword = request.getParameter("password");
 
         if (uname.equals("jsmith@toba.com") && pword.equals("letmein")) {
-            url = "/Account_activity.html";
+            url = "/Account_activity.jsp";
         } else {
-            url = "/Login_failure.html";
+            url = "/Login_failure.jsp";
         }
         getServletContext()
                 .getRequestDispatcher(url)

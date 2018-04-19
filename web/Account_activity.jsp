@@ -7,33 +7,23 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles/TOBA_stylesheet.css" />
-        <title>Account Activity</title>
-        <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-    </head>
-    
-       
+    <body>     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:import url="/includes/header.html"/>
+
+
         <h1>ACCOUNT ACTIVITY</h1>
         
- 
- <c:choose>
 
-<c:when test="${sessionScope.user2 != null}">
+
+<c:if test="${sessionScope.user2 != null}">
 
 Welcome ${user2.firstName} ${user2.lastName}.
+</c:if>
 
-</c:when>
+<c:if test="${sessionScope.user2 =null}">
 
-<c:otherwise>
-
-You are not logged in.
-
-</c:otherwise>
-
-</c:choose>
-    
+    <p>You are not logged in.</p></c:if>
+    </body>   
+     <c:import url="/includes/footer.jsp"/>
+</html>

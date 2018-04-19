@@ -1,14 +1,7 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Login</title>
-        <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <link rel="stylesheet" href="styles/TOBA_stylesheet.css" />
-
-    </head>
+   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<c:import url="/includes/header.html"/>
     <body>
        
         <h1>Titan Banking Login</h1>
@@ -29,4 +22,5 @@
         </form>
 
     </body>
+    <c:import url="/includes/footer.jsp"/>
 </html>
