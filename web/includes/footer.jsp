@@ -5,6 +5,9 @@
     int currentMonth=currentDate.get(Calendar.MONTH);
     int currentDay=currentDate.get(Calendar.DATE);
 %>
-<p>&copy; Copyright <%=currentMonth%>/<%=currentDay%>/<%= currentYear %> Titan Banking Inc.</p>
+
+
+<div class="footer">
+    <p>&copy; Copyright <%=currentMonth%>/<%=currentDay%>/<%= currentYear %> Titan Banking Inc.</p></div>
 </body>
 </html>
