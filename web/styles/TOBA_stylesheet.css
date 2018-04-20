@@ -79,13 +79,16 @@ font-size: 90%;}
 
 
 
-footer   {font-size: .75em;
+.footer   {font-size: .75em;
        font-style: italic; 
        text-align: center; 
 	   padding-top: 2em; 		
 	   font-family: Arial, san-serif;
 	   background-color: #F8FC81;
 	   color: #050505; 
+           position: fixed;
+    left: 0;
+    text-align: center;
 	  
 }
 form {
