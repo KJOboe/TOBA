@@ -12,7 +12,7 @@ public class UserDB {
     public static void insert(User user) {
         EntityManager em = DBUtil.getEmFactory().createEntityManager();
         EntityTransaction trans = em.getTransaction();
-        trans.begin();        
+        trans.begin();
         try {
             em.persist(user);
             trans.commit();
@@ -23,5 +23,5 @@ public class UserDB {
             em.close();
         }
     }
-  
-    }
+
+}

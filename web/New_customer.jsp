@@ -7,8 +7,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-   <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:import url="/includes/header.html"/>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <c:import url="/includes/header.html"/>
     <body>
         <p><i>${message}</i></p>
         <form action="newcustomer" method="post">
@@ -30,5 +30,5 @@
             </fieldset>
         </form>
     </body>
-     <c:import url="/includes/footer.jsp"/>
+    <c:import url="/includes/footer.jsp"/>
 </html>

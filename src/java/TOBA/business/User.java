@@ -1,4 +1,3 @@
-
 package TOBA.business;
 
 import java.io.Serializable;
@@ -6,9 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-@Entity       
+
+@Entity
 public class User implements Serializable {
- @Id
+
+    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String firstName;
     private String lastName;
@@ -20,35 +21,33 @@ public class User implements Serializable {
     private String zip;
     private String username;
     private String password;
-    
-   
-    
+
     public User() {
         firstName = "";
         lastName = "";
         email = "";
         phone = "";
-        address="";
-        city="";
-        state="";
-        zip="";
-        username="";
-        password="";
-        
+        address = "";
+        city = "";
+        state = "";
+        zip = "";
+        username = "";
+        password = "";
+
     }
 
     public User(String firstName, String lastName, String email, String phone, String address,
-            String city, String state, String zip, String username, String password ) {
+            String city, String state, String zip, String username, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-        this.phone= phone;
-        this.address=address;
-        this.city=city;
-        this.state=state;
-        this.zip=zip;
-        this.username=username;
-        this.password=password;
+        this.phone = phone;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+        this.username = username;
+        this.password = password;
     }
 
     public String getFirstName() {
@@ -74,20 +73,23 @@ public class User implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-     public String getPhone() {
+
+    public String getPhone() {
         return phone;
     }
 
     public void setPhone(String phone) {
         this.phone = phone;
     }
-     public String getAddress() {
+
+    public String getAddress() {
         return address;
     }
 
     public void setAddress(String address) {
         this.address = address;
     }
+
     public String getCity() {
         return city;
     }
@@ -95,6 +97,7 @@ public class User implements Serializable {
     public void setCity(String city) {
         this.city = city;
     }
+
     public String getState() {
         return state;
     }
@@ -102,6 +105,7 @@ public class User implements Serializable {
     public void setState(String state) {
         this.state = state;
     }
+
     public String getZip() {
         return zip;
     }
@@ -109,6 +113,7 @@ public class User implements Serializable {
     public void setZip(String zip) {
         this.zip = zip;
     }
+
     public String getUsername() {
         return username;
     }
@@ -116,6 +121,7 @@ public class User implements Serializable {
     public void setUsername(String username) {
         this.username = username;
     }
+
     public String getPassword() {
         return password;
     }

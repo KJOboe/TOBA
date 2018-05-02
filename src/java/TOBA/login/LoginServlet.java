@@ -5,6 +5,7 @@
  */
 package TOBA.login;
 
+import TOBA.business.User;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -24,19 +25,26 @@ public class LoginServlet extends HttpServlet {
             throws ServletException, IOException {
 
         String url;
-
-        String uname = request.getParameter("userName");
+        String uname = request.getParameter("username");
 
         String pword = request.getParameter("password");
 
-        if (uname.equals("jsmith@toba.com") && pword.equals("letmein")) {
-            url = "/Account_activity.jsp";
+        User user = (User) request.getSession().getAttribute("user");
+        if (user == null) {
+            url = "/New_customer.jsp";
         } else {
-            url = "/Login_failure.jsp";
+            if (uname.equals(user.getUsername()) && pword.equals(user.getPassword())) {
+                url = "/Account_activity.jsp";
+            } else {
+                url = "/Login_failure.jsp";
+            }
+
         }
+
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
+
     }
 
     @Override

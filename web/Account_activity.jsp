@@ -7,30 +7,30 @@
 
 <!DOCTYPE html>
 <html>
-        
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:import url="/includes/header.html"/>
+
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <c:import url="/includes/header.html"/>
 
 
-        <h1>ACCOUNT ACTIVITY</h1>
-   <c:choose>
+    <h1>ACCOUNT ACTIVITY</h1>
+    <c:choose>
 
-<c:when test="${sessionScope.user != null}">
+        <c:when test="${sessionScope.user != null}">
 
-Welcome ${user.firstName}, ${user.lastName}
+            Welcome ${user.firstName} ${user.lastName}.
 
-</c:when>
+        </c:when>
 
-<c:otherwise>
+        <c:otherwise>
 
-You are not logged in.
+            You are not logged in.
 
-</c:otherwise>
+        </c:otherwise>
 
-</c:choose>     
+    </c:choose>     
 
 
 
-   
-     <c:import url="/includes/footer.jsp"/>
+
+    <c:import url="/includes/footer.jsp"/>
 </html>
