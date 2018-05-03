@@ -47,10 +47,42 @@ http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
         <servlet-name>LoginServlet2</servlet-name>
         <url-pattern>/LoginServlet2</url-pattern>
     </servlet-mapping>
+    <!-- Define two security role -->
+    
+    <security-role>
+        <description>system administrators</description>
+        <role-name>administrator</role-name>
+    </security-role>
+
+    <!-- Restrict access to all files in the /admin folder -->
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Protected Area</web-resource-name>
+            <url-pattern>/Admin/*</url-pattern>
+        </web-resource-collection>
+        <!-- Authorize the programmer and service roles -->
+        <auth-constraint>
+            <role-name>administrator</role-name>      
+        </auth-constraint>
+         
+    </security-constraint>
+
+    <!-- Use form-based authentication -->
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/Admin/login.jsp</form-login-page>
+            <form-error-page>/Admin/login_error.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
     
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    
+    
+    
+    
 </web-app>
